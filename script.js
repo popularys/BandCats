@@ -1,18 +1,18 @@
-if (!cats) {
-    fetch(path + "/show")
-        .then(function(res) {
-            return res.json();
-        })
-        .then(function(data) {
-            if (data.length) {
-                cats = data;
-                localStorage.setItem("popularys", JSON.stringify(data));
-                for (let cat of data) {
-                    createCard(cat, block);
-                }
-            }
-        })
-}
+// if (!cats) {
+//     fetch(path + "/show")
+//         .then(function(res) {
+//             return res.json();
+//         })
+//         .then(function(data) {
+//             if (data.length) {
+//                 cats = data;
+//                 localStorage.setItem("popularys", JSON.stringify(data));
+//                 for (let cat of data) {
+//                     createCard(cat, block);
+//                 }
+//             }
+//         })
+// }
 
 
 addBtn.addEventListener("click", e => {
