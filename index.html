@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BandCats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- <button class="add btn">
+            <i class="fa-solid fa-circle-plus add_btn" title="Add Cat"></i>
+        </button> -->
+        <button class="add btn">
+        <i class="fa-solid fa-plus"></i>
+        </button>
+        <!-- <button class="change user btn">
+            <i class="fa-solid fa-user-pen"></i>
+        </button> -->
+    </header>
+    <div class="wrapper"></div>
+
+    <div class="modal-block">
+        <div class="modal">
+            <button class="modal-close btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Add Cat</h2>
+            <form id="form1" name="add">
+                <div>
+                <input type="text" name="name"
+                placeholder="Cat's name" required>
+                </div>
+            <div>
+                <input type="text"
+                name="image" placeholder="Cat's photo (link)">
+                </div>
+                <div><input type="number" name="age" placeholder="Age" min="0"></div>
+                <div><input type="number" name="rate" placeholder="Rate" min="0" max="5"></div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="favorite">
+                        Favorite
+                    </label>
+                    <br/>
+                    <textarea name="description" placeholder="Describe your cat"></textarea>
+                </div>
+            <div class="preview"></div>
+            <button type="submit">Add Cat</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="change-modal-block"> ДОБАВИТЬ ПУНКТ ОПИСАНИЕ КОТИКА И ДОБАВИТЬ ВСЁ В КНОПКУ РЯДОМ С ЛАЙКОМ
+        <div class="change">
+            <button class="modal-close btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Change Cat</h2>
+            <form id="form1" name="add">
+                <div>
+                    <input type="text" name="name" placeholder="Cat's name">
+                </div>
+                <div>
+                    <input type="text" name="image" placeholder="Cat's photo (link)">
+                </div>
+                <div><input type="number" name="age" placeholder="Age" min="0"></div>
+                <div><input type="number" name="rate" placeholder="Rate" min="0" max="5"></div>
+                <div>
+                    <label>
+                        <input type="checkbox" name="favorite">
+                        Favorite
+                    </label>
+                    <br />
+                    <textarea name="description" placeholder="Describe your cat"></textarea>
+                </div>
+                <div class="preview"></div>
+                <button type="submit">Save Cat</button>
+            </form>
+        </div>
+    </div> -->
+
+    <script src="js/functions.js"></script>
+    <script src="js/global.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
