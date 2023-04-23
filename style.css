@@ -1,16 +1,30 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: var(--var-bgcolor);
+    color: var(--var-fontcolor);
 }
+:root {
+    --var-bgcolor: #fff;
+    --var-fontcolor: #000;
+}
+
+[dark] {
+    --var-bgcolor: #333;
+    --var-fontcolor: #eee;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
+
 h2 {
     margin: 0;
 }
+
 .wrapper {
     min-height: 100vh;
     /* background-color: rgb(233, 147, 255); */
@@ -23,6 +37,7 @@ h2 {
     gap: 30px;
     align-content: flex-start;
 }
+
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +49,13 @@ h2 {
     box-shadow: 0 0 15px rgb(225, 0, 255), 0 0 5px #0008;
     position: relative;
 }
+
 .card:hover {
     color: springgreen;
     /* transform: scale(1.1, 1.1); */
     box-shadow: 0 0 35px rgb(225, 0, 255), 0 0 15px #0008;
 }
+
 .card .like {
     position: absolute;
     right: 8px;
@@ -46,17 +63,20 @@ h2 {
     color: darkviolet;
     cursor: pointer;
 }
+
 .card .change {
     position: absolute;
     bottom: 1px;
     cursor: pointer;
 }
+
 .card .trash {
     position: absolute;
     left: 6px;
     bottom: 6px;
     cursor: pointer;
 }
+
 .card .pic {
     height: 200px;
     width: 100%;
@@ -66,12 +86,14 @@ h2 {
     background-position: center;
     background-size: cover;
 }
+
 .pic.tmp {
     background-image: url(images/default.png);
     /* background-image: url(https://www.24petwatch.com/adobe/dynamicmedia/deliver/dm-aid--494fba93-e183-47b2-bc12-8e5072be390a/24petwatch-hero-web.png); */
     background-size: contain auto;
     /* background-size: auto 69%; */
 }
+
 .btn {
     outline: none;
     border: none;
@@ -83,6 +105,7 @@ h2 {
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .btn:hover {
     color: springgreen;
     transform: scale(1.1, 1.1);
@@ -115,9 +138,11 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .modal-block.active {
     display: flex;
 }
+
 .modal {
     background-color: #fff;
     padding: 16px;
@@ -128,16 +153,19 @@ h2 {
     overflow: auto;
     position: relative;
 }
+
 form {
     display: grid;
     margin-top: 16px; 
     gap: 8px;
 }
+
 input:note([type="checkbox"]) {
     width: 100%;
     box-sizing: border-box;
     height: 30px;
 }
+
 .preview {
     height: 200px;
     background-color: springgreen;
@@ -146,9 +174,11 @@ input:note([type="checkbox"]) {
     background-position: center;
     background-size: cover;
 }
+
 /* input, textarea {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid darkgray;
     background-color: transparent;
 } */
+

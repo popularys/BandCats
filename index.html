@@ -10,6 +10,15 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script>
+        function changeTheme(isChecked) {
+            if (isChecked) {
+                document.body.setAttribute('dark', '');
+            } else {
+                document.body.removeAttribute('dark');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -20,10 +29,14 @@
         <button class="add btn">
         <i class="fa-solid fa-plus"></i>
         </button>
+        <label>
+            <input type="checkbox" onchange="changeTheme(this.checked)">
+            Dark Theme
+        </label>
         <!-- <button class="change user btn">
             <i class="fa-solid fa-user-pen"></i>
         </button> -->
-    </header>
+    </header>   
     <div class="wrapper"></div>
 
     <div class="modal-block">
