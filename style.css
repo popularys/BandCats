@@ -48,7 +48,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 33px;
     align-items: center;
     border-radius: 8px;
     overflow: hidden;
@@ -65,26 +65,26 @@ h2 {
 .card .like {
     position: absolute;
     right: 8px;
-    bottom: 6px;
+    bottom: 8px;
     color: darkviolet;
     cursor: pointer;
 }
 
 .card .change {
     position: absolute;
-    bottom: 1px;
+    bottom: 6px;
     cursor: pointer;
 }
 
 .card .trash {
     position: absolute;
-    left: 6px;
-    bottom: 6px;
+    left: 8px;
+    bottom: 8px;
     cursor: pointer;
 }
 
 .card .pic {
-    height: 200px;
+    height: 222px;
     width: 100%;
     background-color: springgreen;
     background-image: url(images/default.png);
