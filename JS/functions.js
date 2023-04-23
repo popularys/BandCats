@@ -54,7 +54,7 @@ function setLike(el, id, like) {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
         cats = cats.map(c => {
             if (c.id === id) {
                 c.favorite = like;
@@ -64,6 +64,30 @@ function setLike(el, id, like) {
         localStorage.setItem("popularys", JSON.stringify(cats));
     })
 }
+
+// function setChange(el, id, name, ) {
+//     el.classList.toggle("fa-solid");
+//     el.classList.toggle("fa-regular");
+
+//     fetch(path + "/update/" + id, {
+//         method: "PUT",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({favorite: like})
+//     })
+//     .then(res => res.json())
+//     .then(data => {
+//         // console.log(data);
+//         cats = cats.map(c => {
+//             if (c.id === id) {
+//                 c.favorite = like;
+//             }
+//             return c;
+//         })
+//         localStorage.setItem("popularys", JSON.stringify(cats));
+//     })
+// }
 
 function deleteCard(id, el) {
     if (id) {
@@ -112,3 +136,33 @@ function changeCard(cat, tag = box) {
     // cardImg.style.height = cardImg.offsetWidth + "px";
 }
 
+function showModal(id, el) {
+    let m = Array.from(modals).find(m => m.dataset.type === el.dataset.action);
+    m.classList.add("active");
+    let content = m.querySelector(".modal-cat")
+    let cat = cats.find(cat => cat.id === id);
+    content.innerHTML = `
+        <div class="cat-text">
+            <h2>${cat.name}</h2>
+            <div>${typeof cat.age === "number" ? setAge(cat.age) : "Возраст не указан"}</div>
+            <div>${cat.description || "Информации о котике пока нет..."}</div>
+        </div>
+        <img src=${cat.image || "images/default.png"} alt="${cat.name}">
+    `
+}
+
+function setUpd(id, el) {
+    Array.from(modals).find(m => m.dataset.type === el.dataset.action).classList.add("active");
+    let cat = cats.find(cat => cat.id === id);
+    console.log(cat);
+    for (let i = 0; i < updForm.elements.length; i++) {
+        let inp = updForm.elements[i];
+        if (inp.name && cat[inp.name]) {
+            if (inp.type === "checkbox") {
+                inp.checked = cat[inp.name]
+            } else {
+                inp.value = cat[inp.name];
+            }
+        }
+    }
+}
