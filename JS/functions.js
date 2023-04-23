@@ -55,11 +55,11 @@ function setLike(el, id, like) {
     .then(res => res.json())
     .then(data => {
         console.log(data);
-        cats = cats.map(p => {
-            if (p.id === id) {
-                p.favorite = like;
+        cats = cats.map(c => {
+            if (c.id === id) {
+                c.favorite = like;
             }
-            return p;
+            return c;
         })
         localStorage.setItem("popularys", JSON.stringify(cats));
     })
