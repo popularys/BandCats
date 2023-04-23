@@ -5,7 +5,7 @@ const mdClose = mdBox.querySelector(".modal-close");
 // const mdClose = mdBox.firstElementChild;
 const addForm = document.forms.add;
 const prevTag = addForm.querySelector(".preview");
-const mdChange = document.querySelector(".change");
+const mdChange = document.querySelector(".change-modal-block");
 
 let name = user = "popularys";
 let path = `https://cats.petiteweb.dev/api/single/${user}`;

@@ -9,10 +9,16 @@ body {
     --var-fontcolor: #000;
 }
 
-[dark] {
+/* [dark] {
     --var-bgcolor: #333;
     --var-fontcolor: #eee;
-}
+} */
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --var-bgcolor: #333;
+    --var-fontcolor: #eee;
+}}
 
 header {
     display: flex;

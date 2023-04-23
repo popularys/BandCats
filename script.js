@@ -26,6 +26,9 @@ mdBox.addEventListener("click", e => {
         mdBox.classList.remove("active");
     }
 });
+mdChange.addEventListener("click", e => {
+    mdChange.classList.toggle("active");
+})
 // addForm.elements.favorite.addEventListener("change", e => {
 //     console.log(e.currentTarget.value);
 //     console.log(e.currentTarget.checked);
