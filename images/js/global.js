@@ -18,7 +18,6 @@ if (!user) {
     user = prompt("Введите Ваше уникальное имя пользователя, чтобы увидеть своих котиков:) ", "popularys");
     localStorage.setItem(user);
 }
-
 // const path = `https://cats.petiteweb.dev/api/single/${user}`;
 
 /*
